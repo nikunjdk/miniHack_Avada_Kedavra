@@ -49,7 +49,9 @@ router.get('/logout', function (req, res) {
   res.send('logged out');
 });
 
-
+router.get('/about', function(req, res){
+  res.render('about');
+});
 /* GET home page. */
 router.get('/', function (req, res) {
   res.render('landing');
