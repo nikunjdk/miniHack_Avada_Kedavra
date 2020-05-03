@@ -22,7 +22,7 @@ The app was originally made to include ElectronJS to convert into a desktop app,
 
 ## Tech stack
 * MongoDB
-* FireBase OAuth with Google
+* FireBase Authentication with Google
 * Express Backend
 * NodeJS
 * ElectronJS _(coming soon)_
@@ -33,3 +33,8 @@ https://fit-at-work.herokuapp.com/
 1. Nikunj
 2. Talmiz
 3. Shreya
+
+### Video explaining the app
+
+
+
