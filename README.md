@@ -35,6 +35,6 @@ https://fit-at-work.herokuapp.com/
 3. Shreya
 
 ### Video explaining the app
-
+https://youtu.be/I65YaSAw5Uk
 
 
