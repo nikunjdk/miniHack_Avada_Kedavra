@@ -35,18 +35,13 @@ router.get('/auth/google',
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 router.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/' }),
+  passport.authenticate('google', { failureRedirect: '/', successRedirect: '/dashboard' }),
   function (req, res) {
-    var currentUser = req.user;
-    console.log("=====");
-    console.log(currentUser);
-    console.log("=====");
-    res.render('dashboard', {currentUser: req.user});
   });
 
 router.get('/logout', function (req, res) {
   req.logout();
-  res.send('logged out');
+  res.redirect('/');
 });
 
 router.get('/about', function(req, res){
@@ -57,8 +52,8 @@ router.get('/', function (req, res) {
   res.render('landing');
 });
 
-router.get('/', function (req, res) {
-  res.send("Sign in successfull");
+router.get('/dashboard', function (req, res) {
+  res.render('dashboard', {currentUser: req.user});
 });
 
 module.exports = router;
