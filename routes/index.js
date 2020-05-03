@@ -11,7 +11,7 @@ var User = require("../models/user");
 passport.use(new GoogleStrategy({
   clientID: "246655168842-ljbmk6h1ha81tid6v1lcusq23ie2566q.apps.googleusercontent.com",
   clientSecret: "vay0-geAGBSK4-YjLoJMpu4b",
-  callbackURL: "http://localhost:3000/auth/google/callback",
+  callbackURL: "https://fit-at-work.herokuapp.com/auth/google/callback",
   passReqToCallback   : true
 },
   function (req, accessToken, refreshToken, profile, done) {
