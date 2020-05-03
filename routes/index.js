@@ -11,7 +11,7 @@ var User = require("../models/user");
 passport.use(new GoogleStrategy({
   clientID: "246655168842-ljbmk6h1ha81tid6v1lcusq23ie2566q.apps.googleusercontent.com",
   clientSecret: "vay0-geAGBSK4-YjLoJMpu4b",
-  callbackURL: "https://fit-at-work.herokuapp.com/auth/google/callback",
+  callbackURL: "http://localhost:3000/auth/google/callback",
   passReqToCallback   : true
 },
   function (req, accessToken, refreshToken, profile, done) {
@@ -37,7 +37,11 @@ router.get('/auth/google',
 router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   function (req, res) {
-    res.send('sign in successfully');
+    var currentUser = req.user;
+    console.log("=====");
+    console.log(currentUser);
+    console.log("=====");
+    res.render('dashboard', {currentUser: req.user});
   });
 
 router.get('/logout', function (req, res) {
@@ -49,10 +53,6 @@ router.get('/logout', function (req, res) {
 /* GET home page. */
 router.get('/', function (req, res) {
   res.render('landing');
-});
-
-router.get('/', function (req, res) {
-  res.send("Sign in successfull");
 });
 
 module.exports = router;
