@@ -1,24 +1,94 @@
+/* Themes toggling part of the pages */
+:root {
+	--gray0: #f8f8f8;
+	--gray1: #dbe1e8;
+	--gray2: #b2becd;
+	--gray3: #6c7983;
+	--gray4: #454e56;
+	--gray5: #2a2e35;
+	--gray6: #12181b;
+	--blue: #0084a5;
+	--purple: #a82dd1;
+	--yellow: #fff565;
+}
+
+.light {
+	--bg: var(--gray0);
+	--bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+	--bg-dropdown: var(--gray0);
+	--text: var(--gray6);
+	--border-color: var(--blue);
+	--bg-solar: var(--yellow);
+}
+  
+
+.dark {
+	--bg: var(--gray5);
+	--bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+	--bg-dropdown: var(--gray6);
+	--text: var(--gray0);
+	--border-color: var(--purple);
+	--bg-solar: var(--blue);
+}
+
+
+
+
+
+
+.navbar {
+    height: 70px;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+	height: 100%;
+    color: var(--text);
+
+}
+
+
+
+
+
 #header {
-    background-color: #ee4540;
-}
-#one{
-    color: white;
+	background: var(--bg-nav);
+    color: var(--text);
 }
 
-#bg{
-	background-color: #2d132c;
-}
-
-.content{
-	color: white;
+.content {
+	/* background: var(--bg); */
+    color: var(--text);
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .one{
-	border-left: 5px solid #ee4540;
-	padding-left: 5px;
+	border-left: 5px solid var(--text);
+	padding-left: 10px;
 	margin-top: 1rem;
 }
 
 .h5{
+	
 	margin-bottom: 20px;
+}
+.container {
+	
+}
+
+
+
+
+
+body, #master {
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+			color: var(--text);
+			background: var(--bg);
+			transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
