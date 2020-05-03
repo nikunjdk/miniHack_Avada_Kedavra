@@ -55,14 +55,8 @@ router.get('/', function (req, res) {
   res.render('landing');
 });
 
-<<<<<<< HEAD
-=======
 router.get('/', function (req, res) {
   res.send("Sign in successfull");
 });
 
-router.get('/timer', (req,res)=> {
-  res.render('tick');
-});
->>>>>>> Added timer logic at /timer route
 module.exports = router;
