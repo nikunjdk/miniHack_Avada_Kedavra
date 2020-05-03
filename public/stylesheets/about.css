@@ -31,11 +31,9 @@
 	--bg-solar: var(--blue);
 }
 
-<<<<<<< HEAD
 #bg .darkmode-background{
 	background-color: #2d132c;
-=======
-
+}
 
 
 
@@ -43,7 +41,6 @@
 .navbar {
     height: 70px;
     width: 100%;
->>>>>>> master
 }
 
 .navbar-nav {
@@ -81,12 +78,6 @@
 	
 	margin-bottom: 20px;
 }
-.container {
-	
-}
-
-
-
 
 
 body, #master {
