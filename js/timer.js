@@ -11,6 +11,7 @@ class Timer {
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
+        this.durationInput.addEventListener('click', this.pause);
     }
 
     start = () => {
@@ -18,7 +19,7 @@ class Timer {
             this.onStart(this.timeRemaining);
         }
         this.tick();
-        this.interval = setInterval(this.tick, 20);
+        this.interval = setInterval(this.tick, 1000);
     };
 
     pause = () => {
@@ -33,7 +34,16 @@ class Timer {
             }
         }
         else {
-            this.timeRemaining = this.timeRemaining - 0.02;
+            if (this.timeRemaining - Math.floor(this.timeRemaining) > 0.60)
+                this.timeRemaining = Math.floor(this.timeRemaining) + 0.60;
+
+            if (this.timeRemaining === Math.floor(this.timeRemaining)) {
+                this.timeRemaining--;
+                this.timeRemaining += 0.60;
+            }
+
+            this.timeRemaining = this.timeRemaining - 0.01;
+            console.log(this.timeRemaining);
             if (this.onTick) {
                 this.onTick(this.timeRemaining);
             }
@@ -58,9 +68,8 @@ const timer = new Timer(durationInput, startButton, pauseButton, {
         duration = totalDuration;
     },
     onTick(timeRemaining) {
-        // circle.setAttribute('stroke-dashoffset', perimeter * timeRemaining / duration - perimeter);
     },
     onComplete() {
-        console.log('Timer complete!');
+        $("#staticBackdrop").modal();
     }
 });
