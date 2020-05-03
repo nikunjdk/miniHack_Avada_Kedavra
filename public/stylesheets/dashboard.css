@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbDQPRL0jnxPEFoXRCFQABwGo6gLMzW1mhhS61DOsZVn0ai0Bz&usqp=CAU);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 40px auto;
+}
+
+.col-2 {
+  text-align: center;
+}
+
+img {
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}

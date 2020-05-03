@@ -62,6 +62,7 @@ app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist')); // r
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 app.use('/js', express.static(__dirname + '/node_modules/darkmode-js/lib')); // redirect Darkmode.js
+app.use('/js', express.static(__dirname + '/node_modules/chart.js/dist')); // redirect Chart.js
 
 
 // catch 404 and forward to error handler
